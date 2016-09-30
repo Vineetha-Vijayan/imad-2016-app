@@ -4,69 +4,37 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+  
+  var articleOne={
+      
+      title:'ArticleOne|Vineetha Vijayan',
+      heading :'Article-one',
+      date:'Sep 30',
+      content :`<p>
+                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis 
+                Hoping that his will be useful.
+                
+                
+            </p>
+            
+             <p>
+                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis 
+                Hoping that his will be useful.
+                
+                
+            </p>
+             <p>
+                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis .
+                Hoping that his will be useful.
+                
+                
+            </p> `
+  };  
 
-var articles = {
-
-var 'article-one'   : {
-    
-      title :'Article One |Vineetha Vijayan',
-    heading :'Article One',
-    date :'Sep 29',
-        content:
-             ` <p>
-                Hi! This is Vineetha Vijayan and this is my second Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>`
-           
-    
-    
-    
-    
-    
-},
- var 'article-two'  : {
-    
-      title :'Article Two |Vineetha Vijayan',
-    heading :'Article Two',
-    date :'Sep 29',
-        content:
-             ` <p>
-                Hi! This is Vineetha Vijayan and this is my second Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>`
-           
-    
-    
-    
-    
-    
-},
- var 'article-three' : {  
-    
-    title :'Article Three |Vineetha Vijayan',
-    heading :'Article Three',
-    date :'Sep 29',
-        content:
-             ` <p>
-                Hi! This is Vineetha Vijayan and this is my third  Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>`
-           
-}
-     
-    
-    
-};
 function createTemplate(data){
     var title=  data.title;
-    var date =  data.date;
     var heading = data.heading;
+    var date =  data.date;
     var content = data.content;
     
 var htmlTemplate=`<html>
@@ -114,9 +82,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res) {
- var articleName=req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
+app.get('/articleone', function (req, res) {
+// var articleName=req.params.articleName;
+ // res.send(createTemplate(articles[articleName]));
+ res.send(createTemplate(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
