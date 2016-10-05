@@ -44,7 +44,8 @@ var request=new XMLHttpRequest();
 request.onreadystatechange=function(){
  if(request.readyState===XMLHttpRequest.DONE){
      if(request.status===200){
-var names=['name1','name2','name3','name4'];
+var names=request.responseText;
+names=JSON.parse(names);
 var list='';
 for(i=0;i<names.length;i++)
 var ul=document.getElementById('name-list');
