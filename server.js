@@ -132,6 +132,10 @@ var articleName=req.params.articleName;
  //res.send(createTemplate(articleOne));
 });*/
 
+app.get('/article-one', function (req, res) {
+  //res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+  res.send("Article one");
+});
 
 
 app.get('/ui/style.css', function (req, res) {
