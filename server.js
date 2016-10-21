@@ -53,7 +53,7 @@ app.use(morgan('combined'));
             </p>
             
              <p>
-                Hi! This is Vineetha Vijayan and this is my third Article. Please go trough thhis 
+                Hi! This is Vineetha Vijayan and this is my third Article. Please go trough this 
                 Hoping that his will be useful.
                 
                 
