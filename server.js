@@ -13,62 +13,7 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
-  var articles={
-   'article-one':{
-      
-      title:'ArticleOne|Vineetha Vijayan',
-      heading :'Article-one',
-      date:'Sep 30',
-      content :`<p>
-                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>
-            
-             <p>
-                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>
-             <p>
-                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis .
-                Hoping that his will be useful.
-                
-                
-            </p> `
-  },
-   'article-two':{
-       title:'ArticleTwo|Vineetha Vijayan',
-      heading :'Article-two',
-      date:'Sep 30',
-      content :`<p>
-                Hi! This is Vineetha Vijayan and this is my second Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p> `
-   },
-   'article-three':{
-       title:'ArticleThree|Vineetha Vijayan',
-      heading :'Article-three',
-      date:'Sep 30',
-      content :`<p>
-                Hi! This is Vineetha Vijayan and this is my first Article. Please go trough thhis 
-                Hoping that his will be useful.
-                
-                
-            </p>
-            
-             <p>
-                Hi! This is Vineetha Vijayan and this is my third Article. Please go trough this 
-                Hoping that his will be useful.
-                
-                
-            </p>`
-   }
-  };
+
  
 
 function createTemplate(data){
